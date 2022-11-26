@@ -1,12 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
+import Head from "next/head";
+import Image from "next/image";
+import Layout from "../layout/layout";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hlell</h1>
-    </div>
-     
-  )
+    <Layout>
+      <h1>inicio</h1>
+    </Layout>
+  );
 }
