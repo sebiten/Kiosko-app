@@ -3,7 +3,7 @@ import Image from "next/image";
 import useQuiosco from "../hooks/useQuiosco";
 
 function Categoria({ categoria }) {
-  const { categoriaActual, handleClickCategoria } = useQuiosco();
+  const { categoriaActual, handleClickCategoria } = useQuiosco({});
   const { nombre, icono, id } = categoria;
   return (
     <div

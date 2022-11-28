@@ -17,11 +17,14 @@ const QuioscoProvider = ({ children }) => {
     setCategoriaActual(categoria[0]);
   }
 
-
-
   useEffect(() => {
     obtenerCategorias(); // se hace el fetch desde obetenercategorias
   }, []);
+
+  useEffect(() => {
+    setCategoriaActual(categorias[0]);
+  }, [categorias])
+  
   return <QuioscoContext.Provider value={{
     categorias,
     handleClickCategoria,
