@@ -7,7 +7,7 @@ function SideBar() {
 
   return (
     <>
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center sticky">
 
       <Image
         width={200}
