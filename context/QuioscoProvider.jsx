@@ -6,8 +6,11 @@ const QuioscoContext = createContext();
 const QuioscoProvider = ({ children }) => {
   const [categorias, setCategorias] = useState([]);
   const [ categoriaActual, setCategoriaActual ] = useState({});
+  const [producto, setProdcuto] = useState({});
+  const [modal, setModal] = useState(false);
 
-  
+
+
   const obtenerCategorias = async () => {
     const { data } = await axios('/api/categorias');
     setCategorias(data); // funcion para poner en el useEffect en vez de escribirlo ahi.
@@ -24,11 +27,24 @@ const QuioscoProvider = ({ children }) => {
   useEffect(() => {
     setCategoriaActual(categorias[0]);
   }, [categorias])
+
+  const handleSetProducto = producto => {
+    setProdcuto(producto);
+  }
+
+  const handleChangeModal = () => {
+    setModal(!modal);
+  }
+
   
   return <QuioscoContext.Provider value={{
     categorias,
     handleClickCategoria,
-    categoriaActual
+    categoriaActual,
+    handleSetProducto,
+    producto,
+    modal,
+    handleChangeModal
 
   }}>{children}</QuioscoContext.Provider>;
 };
