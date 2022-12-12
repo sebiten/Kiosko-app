@@ -4,7 +4,7 @@ import { formatearDinero } from "../helpers";
 import { useState } from "react";
 
 const ModalProducto = () => {
-  const { producto, handleChangeModal } = useQuiosco();
+  const { producto, handleChangeModal, handleAgregarPedido } = useQuiosco();
   const [cantidad, setCantidad] = useState(1)
   return (
     <div className="md:flex gap-10">
@@ -84,6 +84,13 @@ const ModalProducto = () => {
             </svg>
           </button>
         </div>
+        <button
+          type="button"
+          className="bg-amber-500 hover:bg-amber-700 text-white font-bold text-xl p-3 mt-5 w-full"
+          onClick={() => handleAgregarPedido({...producto, cantidad})}
+        >
+          Agregar al carrito
+        </button>
       </div>
     </div>
   );

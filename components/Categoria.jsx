@@ -9,7 +9,7 @@ function Categoria({ categoria }) {
     <div
       className={`${
         categoriaActual?.id === id ? "bg-amber-400" : ""
-      } flex items-center gap-4 w-full border p-5 hover:bg-amber-400`}
+      } flex items-center gap-4 w-full border p-5 px-2 mx-auto hover:bg-amber-400`}
     >
       <Image
         alt="icono"
