@@ -12,7 +12,7 @@ const ModalProducto = () => {
    if (pedido.some((pedidoState) => pedidoState.id === producto.id)) {
     const productoEdicion = pedido.find((pedidoState) => pedidoState.id === producto.id);
     setEdicion(true);
-    setCantidad();
+    setCantidad(productoEdicion.cantidad);
    }
   }, [producto, pedido]);
 
@@ -101,7 +101,7 @@ const ModalProducto = () => {
           className="bg-amber-500 hover:bg-amber-700 text-white font-bold text-xl p-3 mt-5 w-full"
           onClick={() => handleAgregarPedido({...producto, cantidad})}
         >
-          Agregar al carrito
+          {edicion ? "Guardar Cambios" : "Agregar al Pedido"}
         </button>
       </div>
     </div>
