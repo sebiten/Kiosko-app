@@ -9,7 +9,7 @@ const QuioscoProvider = ({ children }) => {
   const [producto, setProdcuto] = useState({});
   const [modal, setModal] = useState(false);
   const [pedido, setPedido ] = useState([]);
-
+  const [paso, setPaso] = useState(1);
 
 
   const obtenerCategorias = async () => {
@@ -48,6 +48,8 @@ const QuioscoProvider = ({ children }) => {
 
     setModal(false);
   }
+  const handleChangePaso = paso => {
+
   
   return <QuioscoContext.Provider value={{
     categorias,
@@ -58,7 +60,9 @@ const QuioscoProvider = ({ children }) => {
     modal,
     handleChangeModal,
     handleAgregarPedido,
-    pedido
+    pedido,
+    paso,
+    handleChangePaso
   }}>{children}</QuioscoContext.Provider>;
 };
 export {
