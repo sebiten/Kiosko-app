@@ -49,6 +49,8 @@ const QuioscoProvider = ({ children }) => {
     setModal(false);
   }
   const handleChangePaso = paso => {
+    setPaso(paso);
+  }
 
   
   return <QuioscoContext.Provider value={{
@@ -65,6 +67,7 @@ const QuioscoProvider = ({ children }) => {
     handleChangePaso
   }}>{children}</QuioscoContext.Provider>;
 };
+
 export {
   QuioscoProvider
 }
