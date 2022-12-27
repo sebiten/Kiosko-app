@@ -21,7 +21,7 @@ const Producto = ({producto}) => {
               handleSetProducto(producto);
               handleChangeModal();
             }}
-          >Agregar</button>
+          >Añadir</button>
       </div>
     </div>
   )

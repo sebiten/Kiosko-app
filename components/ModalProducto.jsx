@@ -19,7 +19,7 @@ const ModalProducto = () => {
   
 
   return (
-    <div className="md:flex gap-10">
+    <div className="md:flex gap-8">
       <div className="md:w-1/3">
         <Image
           width={400}
@@ -52,7 +52,7 @@ const ModalProducto = () => {
         <p className="text-amber-500 mt-5 font-black text-5xl">
           {formatearDinero(producto.precio)}
         </p>
-        <div className="flex gap-4 mt-5 ">
+        <div className="flex gap-5 mt-4 ">
           <button
             type="button"
             onClick={() => {
