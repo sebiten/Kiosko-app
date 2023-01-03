@@ -33,9 +33,10 @@ const QuioscoProvider = ({ children }) => {
   }
 
   const handleChangeModal = () => {
+
     setModal(!modal);
   }
-  const handleAgregarPedido = ({categoriaId, imagen, ...producto}) => {
+  const handleAgregarPedido = ({categoriaId, ...producto}) => {
     if(pedido.some(productoState => productoState.id === producto.id)) {
       const pedidoActualizado = pedido.map(productoState => productoState.id === producto.id ? producto : productoState);
       setPedido(pedidoActualizado);
@@ -46,6 +47,18 @@ const QuioscoProvider = ({ children }) => {
   }
 
     setModal(false);
+  }
+  const handleEditarCantidades = id => {
+      const productoActualizar = pedido.filter(producto => producto.id === id);
+      setProdcuto(productoActualizar[0]);
+      setModal(!modal);
+
+  }
+  const handleEliminarProducto = id => {
+    const pedidoActualizado = pedido.filter(producto => producto.id !== id);
+    setPedido(pedidoActualizado);
+    toast.error('Producto eliminado');
+
   }
  
   
@@ -59,6 +72,8 @@ const QuioscoProvider = ({ children }) => {
     handleChangeModal,
     handleAgregarPedido,
     pedido,
+    handleEditarCantidades,
+    handleEliminarProducto
   }}>{children}</QuioscoContext.Provider>;
 };
 
