@@ -1,7 +1,10 @@
 import Layout from "../layout/layout"
 import useQuiosco from "../hooks/useQuiosco"
 import ResumenProducto from "../components/ResumenProducto";
-const resumen = () => {
+
+
+export default function Resumen() {
+
   const { pedido } = useQuiosco();
   return (
     <Layout pagina="Resumen">
@@ -22,5 +25,3 @@ const resumen = () => {
     </Layout>
   )
 }
-
-export default resumen
