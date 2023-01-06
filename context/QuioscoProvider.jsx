@@ -71,7 +71,14 @@ const QuioscoProvider = ({ children }) => {
   }
   const colocarPedido = async (e) => {
     e.preventDefault()
-    console.log('Colocando pedido')
+    try {
+      const {data} = await axios.post('/api/ordenes', {pedido, nombre, total, fecha: Date.now})
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+
+
   }
 
   useEffect(() => {
