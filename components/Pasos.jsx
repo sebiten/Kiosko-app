@@ -26,7 +26,7 @@ const Pasos = () => {
         onClick={() => {
           router.push(paso.url)
         }}
-        className="text-2xl font-bold"
+        className="text-2xl font-bold border-b-2  border-amber-400 pb-2 hover:border-amber-700 transition-all duration-300"
         key={paso.paso}>{paso.nombre}</button>
       ))}
     </div>
