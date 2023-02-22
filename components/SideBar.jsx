@@ -7,11 +7,11 @@ function SideBar() {
 
   return (
     <>
-    <div className="flex items-center justify-center sticky uppercase">
+    <div className="flex items-center justify-center sticky ">
 
       <Image
-        width={200}
-        height={100}
+        width={220}
+        height={110}
         alt="logtipo"
         src="/assets/img/logo.svg"
       />
