@@ -34,7 +34,7 @@ export default function Layout({ pagina, children }) {
           <SideBar />
         </aside>
         <main className="md:w-8/12 xl:w-3/4 2xl:w-4/5 h-screen overflow-y-scroll">
-          <div className="p-10">
+          <div className="xl:p-10 p-1">
             <Pasos />
             {children}
           </div>
