@@ -10,7 +10,7 @@ const Producto = ({producto}) => {
     <div className='border-2 p-3'>
       <Image src={`/assets/img/${imagen}.jpg`} alt={producto.nombre} width={400} height={300} />
       <div className="p-5">
-          <h3 className="font-bold text-xl">{nombre}</h3>
+          <h3 className="font-bold text-xl truncate w-90 clamp-1">{nombre}</h3>
           <p className="mt-5 font-black text-2xl text-amber-400">
             {formatearDinero(precio)}
           </p>
